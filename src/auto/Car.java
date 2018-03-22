@@ -1,8 +1,11 @@
 package auto;
-// TODO please modify the package names
+// TODO please modify the package names to src.auto - to make the code compile (or to the src.main.auto standard)
+
 import java.util.ArrayList;
 
 public class Car extends Vehicles {
+// TODO please refactor the code: remove empty lines;
+// keep the order of the variables/methods in a class: constants, global vars, constructors, other methods
 
     @Override
     public String getInformation() {
@@ -22,6 +25,8 @@ public class Car extends Vehicles {
 
     }
 
+    // TODO using a static method here doesn't make sens. (explain why not?) And fix it. :)
+    // TODO using a list as a parameter is not bad, but is this method really related to this class? Please try to argue about this...
     public static void addCar(ArrayList<Car> auto, Car autos) {
         auto.add(autos);
 

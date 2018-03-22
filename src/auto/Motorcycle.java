@@ -3,7 +3,7 @@ package auto;
 import java.util.ArrayList;
 
 public class Motorcycle extends Vehicles {
-
+// TODO: format code, and keep the methods order
 
     @Override
     public String getInformation() {
@@ -22,7 +22,7 @@ public class Motorcycle extends Vehicles {
         setPrice(setPrice);
 
     }
-
+    // TODO: why static?
     public static void addMotorcycle(ArrayList<Motorcycle> motorbiciklik, Motorcycle motorbicikli) {
         motorbiciklik.add(motorbicikli);
 

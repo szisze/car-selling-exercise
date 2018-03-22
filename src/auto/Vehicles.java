@@ -1,6 +1,6 @@
 package auto;
 
-public abstract class Vehicles  extends Item{
+public abstract class Vehicles extends Item {
     private String name;
     private double maxSpeed;
 

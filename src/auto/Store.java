@@ -3,12 +3,14 @@ package auto;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// TODO reformat code
 public class Store {
+
     private static ArrayList<Car> auto = new ArrayList<>();
     private static ArrayList<Motorcycle> motorbiciklik = new ArrayList<>();
     private DrivingLesson vezetesiOkatatas;
 
-
+    // TODO maybe you could have the main in a different class, for clarity purposes
     public static void main(String[] args) {
         boolean endOfProgram = false;
 
@@ -16,6 +18,7 @@ public class Store {
         audi65.addCar(auto, audi65);
         Motorcycle suzukiGSX = new Motorcycle("Suzuki GSX", 250, 3000);
         suzukiGSX.addMotorcycle(motorbiciklik, suzukiGSX);
+        // TODO try to avoid hungarian variable names
         DrivingLesson vezetesiOktatas = new DrivingLesson(30, "B", 2000);
 
         while (!endOfProgram) {
@@ -40,6 +43,8 @@ public class Store {
             } else if (s == 4) {
                 if (searchForItemsInArrayListCar(auto, audi65)) {
                     System.out.println("Successfully sold " + audi65.getName());
+                    // TODO: it is not logically right to call the remove function on a car instance.
+                    // you could either call it on the auto list, or define something above it (on the store?)
                     audi65.removeCar(auto, audi65);
                 } else {
                     System.out.println("Sorry in stock don't have " + audi65.getName());
@@ -67,9 +72,12 @@ public class Store {
 
     }
 
+    // TODO: are you sure you want this to be static? couldn't you design this functionality in a different way?
     public static boolean searchForItemsInArrayListCar(ArrayList<Car> autos, Car auto) {
 
         for (int i = 0; i < autos.size(); i++) {
+            // TODO: we will talk about collections and searches later on.
+            // But I suggest using an id for identification. The actual solution will compare the address of the object.
             if (autos.get(i) == auto) {
                 return true;
             } else {
@@ -82,6 +90,7 @@ public class Store {
 
     }
 
+    // TODO: are you sure you want this to be static?
     public static boolean searchForItemsInArrayListMotorcycle(ArrayList<Motorcycle> motorbiciklik, Motorcycle motorbicikli) {
 
         for (int i = 0; i < motorbiciklik.size(); i++) {

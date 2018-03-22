@@ -1,6 +1,7 @@
 package auto;
 
 public class DrivingLesson extends Item {
+// TODO: code format and method ordering
     private String vehiclesType;
     private int lengthOfTheLesson;
     private static int maxAccept = 10;
@@ -53,12 +54,15 @@ public class DrivingLesson extends Item {
         {
             System.out.println("Sorry, we don't have anymore place!");
         }else{
+    // TODO is not right to modify the maxAccept parameter. That should indicate the nr of total possible subscriptions for the store
+    // count the filled in places in a separate variable
         maxAccept = maxAccept - 1;
         System.out.println(maxAccept);
         System.out.println("Now you have "+ maxAccept+ " place");}
     }
 
     public static void finishALesson() {
+        // TODO please rethink this implementation. you shouldn't have hardcoded values inside a function.
         if (maxAccept >= 10) {
             System.out.println("We don'T have mor place!");
         } else {
